@@ -1,0 +1,71 @@
+USER SYMBOL by DSCH 2.6h
+DATE 19/12/2004 20:09:30
+SYM  #74151
+BB(0,0,40,130)
+TITLE 10 10  #74151
+MODEL 6000
+REC(5,5,30,120)
+PIN(0,30,0.00,0.00)4
+PIN(0,40,0.00,0.00)3
+PIN(0,50,0.00,0.00)2
+PIN(0,120,0.00,0.00)1
+PIN(0,60,0.00,0.00)15
+PIN(0,70,0.00,0.00)14
+PIN(0,80,0.00,0.00)13
+PIN(0,90,0.00,0.00)12
+PIN(0,10,0.00,0.00)9
+PIN(0,110,0.00,0.00)10
+PIN(0,100,0.00,0.00)11
+PIN(0,20,0.00,0.00)7
+PIN(40,20,2.00,1.00)5
+PIN(40,10,2.00,1.00)6
+LIG(0,30,5,30)
+LIG(0,40,5,40)
+LIG(0,50,5,50)
+LIG(0,120,5,120)
+LIG(0,60,5,60)
+LIG(0,70,5,70)
+LIG(0,80,5,80)
+LIG(0,90,5,90)
+LIG(0,10,5,10)
+LIG(0,110,5,110)
+LIG(0,100,5,100)
+LIG(0,20,5,20)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,125)
+LIG(5,5,35,5)
+LIG(35,5,35,125)
+LIG(35,125,5,125)
+VLG module IC_MUX8KE1( 4,3,2,1,15,14,13,12,
+VLG  9,10,11,7,5,6);
+VLG  input 4,3,2,1,15,14,13,12;
+VLG  input 9,10,11,7;
+VLG  output 5,6;
+VLG  wire w35,w36;
+VLG  and #(13) and4(w5,w1,9,10,11);
+VLG  and #(13) and4(w8,w6,w7,10,11);
+VLG  and #(13) and4(w12,w9,9,w10,w11);
+VLG  and #(13) and4(w14,w13,w7,10,w11);
+VLG  and #(13) and4(w16,w15,9,w10,11);
+VLG  and #(13) and4(w18,w17,w7,w10,11);
+VLG  and #(13) and4(w20,w19,9,10,w11);
+VLG  and #(13) and4(w22,w21,w7,w10,w11);
+VLG  not #(30) not(w7,9);
+VLG  not #(30) not(w11,11);
+VLG  not #(30) not(w10,10);
+VLG  and #(16) and2(w1,w33,12);
+VLG  and #(16) and2(w19,w33,13);
+VLG  and #(16) and2(w21,w33,4);
+VLG  and #(16) and2(w17,w33,3);
+VLG  and #(16) and2(w13,w33,2);
+VLG  and #(16) and2(w6,w33,1);
+VLG  and #(16) and2(w9,w33,15);
+VLG  and #(16) and2(w15,w33,14);
+VLG  not #(59) inv(w33,7);
+VLG  not #(10) inv(6,5);
+VLG  or #(10) or4_OR1(w35,w5,w20,w16,w12);
+VLG  or #(10) or4_OR2(w36,w8,w14,w18,w22);
+VLG  or #(17) or2_OR3(5,w35,w36);
+VLG endmodule
+FSYM

@@ -1,0 +1,14 @@
+USER SYMBOL by DSCH 2.7f
+DATE 08/12/2014 19:06:55
+SYM  #sym4
+BB(0,0,45,30)
+TITLE 10 -2  #sym4
+MODEL 6000
+REC(5,5,35,20)
+LIG(5,5,5,25)
+LIG(5,5,40,5)
+LIG(40,5,40,25)
+LIG(40,25,5,25)
+VLG module sym4( );
+VLG endmodule
+FSYM

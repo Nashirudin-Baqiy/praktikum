@@ -1,0 +1,24 @@
+// DSCH 2.7f
+// 30/10/2019 19:49:23
+// example
+
+module example( in1,in2,in3,in4,out1);
+ input in1,in2,in3,in4;
+ output out1;
+ or #(16) or(out1,w1,w2);
+ or #(16) or(w1,in1,in2);
+ or #(16) or(w2,in3,in4);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 in1=~in1;
+#2000 in2=~in2;
+#4000 in3=~in3;
+#8000 in4=~in4;
+
+// Simulation parameters
+// in1 CLK 10 10
+// in2 CLK 20 20
+// in3 CLK 40 40
+// in4 CLK 80 80

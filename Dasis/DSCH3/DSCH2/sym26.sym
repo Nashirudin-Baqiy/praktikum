@@ -1,0 +1,79 @@
+USER SYMBOL by DSCH 2.7f
+DATE 12/12/2014 9:02:01
+SYM  #sym26
+BB(0,0,40,140)
+TITLE 10 -2  #sym26
+MODEL 6000
+REC(5,5,30,130)
+PIN(0,70,0.00,0.00)B
+PIN(0,110,0.00,0.00)A
+PIN(0,120,0.00,0.00)A
+PIN(0,80,0.00,0.00)B
+PIN(0,4350004,0.00,0.00)in4
+PIN(0,90,0.00,0.00)B
+PIN(0,130,0.00,0.00)A
+PIN(0,140,0.00,0.00)A
+PIN(0,100,0.00,0.00)B
+PIN(0,60,0.00,0.00)Cin
+PIN(0,40,0.00,0.00)kbd11
+PIN(0,30,0.00,0.00)kbd12
+PIN(0,20,0.00,0.00)kbd13
+PIN(0,10,0.00,0.00)kbd14
+PIN(40,10,2.00,1.00)SUM
+PIN(40,70,2.00,1.00)CarryOut
+PIN(40,80,2.00,1.00)CarryOut
+PIN(40,50,2.00,1.00)out4
+PIN(40,60,2.00,1.00)out3
+PIN(40,40,2.00,1.00)out7
+PIN(40,30,2.00,1.00)out8
+PIN(40,20,2.00,1.00)SUM
+LIG(0,70,5,70)
+LIG(0,110,5,110)
+LIG(0,120,5,120)
+LIG(0,80,5,80)
+LIG(0,4350004,5,4350004)
+LIG(0,90,5,90)
+LIG(0,130,5,130)
+LIG(0,140,5,140)
+LIG(0,100,5,100)
+LIG(0,60,5,60)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(35,10,40,10)
+LIG(35,70,40,70)
+LIG(35,80,40,80)
+LIG(35,50,40,50)
+LIG(35,60,40,60)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(5,5,5,135)
+LIG(5,5,35,5)
+LIG(35,5,35,135)
+LIG(35,135,5,135)
+VLG module sym26( B,A,A,B,in4,B,A,A,
+VLG  B,Cin,kbd11,kbd12,kbd13,kbd14,SUM,CarryOut,
+VLG  CarryOut,out4,out3,out7,out8,SUM);
+VLG  input B,A,A,B,in4,B,A,A;
+VLG  input B,Cin,kbd11,kbd12,kbd13,kbd14;
+VLG  output SUM,CarryOut,CarryOut,out4,out3,out7,out8,SUM;
+VLG  wire w26,w27,w28,w29;
+VLG  xor #(16) xor(SUM,B,A);
+VLG  and #(16) and(CarryOut,B,A);
+VLG  or #(16) or(out7,w16,w10);
+VLG  xor #(13) sub_1(out8,w9,in4);
+VLG  and #(15) sub_2(w10,in4,w9);
+VLG  xor #(13) sub_3(out4,A,B);
+VLG  and #(15) sub_4(out3,B,A);
+VLG  xor #(20) sub_5(w9,A,B);
+VLG  and #(15) sub_6(w16,B,A);
+VLG  xor #(10) sub_7(CarryOut,w26,Cin);
+VLG  xor #(10) sub_8(w26,A,B);
+VLG  nand #(10) sub_9(w27,B,A);
+VLG  nand #(10) sub_10(w28,B,Cin);
+VLG  nand #(10) sub_11(w29,A,Cin);
+VLG  nand #(10) sub_12(SUM,w27,w28,w29);
+VLG endmodule
+FSYM

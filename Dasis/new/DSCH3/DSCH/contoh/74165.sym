@@ -1,0 +1,68 @@
+USER SYMBOL by DSCH 2.6h
+DATE 22/01/2005 9:35:02
+SYM  #74165
+BB(0,0,100,70)
+TITLE 10 10  #74165
+MODEL 6000
+REC(5,5,90,60)
+PIN(0,30,0.00,0.00)SHIFT/LOAD
+PIN(45,70,0.00,0.00)D4
+PIN(85,70,0.00,0.00)D0
+PIN(0,40,0.00,0.00)CLOCK
+PIN(0,50,0.00,0.00)CLOCK_INHIBIT
+PIN(0,20,0.00,0.00)In_Seri
+PIN(75,70,0.00,0.00)D1
+PIN(35,70,0.00,0.00)D5
+PIN(65,70,0.00,0.00)D2
+PIN(15,70,0.00,0.00)D7
+PIN(25,70,0.00,0.00)D6
+PIN(55,70,0.00,0.00)D3
+PIN(45,0,2.00,1.00)Q0
+PIN(75,0,2.00,1.00)nQ0
+LIG(0,30,5,30)
+LIG(45,65,45,70)
+LIG(85,65,85,70)
+LIG(0,40,5,40)
+LIG(0,50,5,50)
+LIG(0,20,5,20)
+LIG(75,65,75,70)
+LIG(35,65,35,70)
+LIG(65,65,65,70)
+LIG(15,65,15,70)
+LIG(25,65,25,70)
+LIG(55,65,55,70)
+LIG(45,0,45,5)
+LIG(75,0,75,5)
+LIG(5,5,5,65)
+LIG(5,5,95,5)
+LIG(95,5,95,65)
+LIG(95,65,5,65)
+VLG module IC_74165( SHIFT/LOAD,D4,D0,CLOCK,CLOCK_INHIBIT,In_Seri,D1,D5,
+VLG  D2,D7,D6,D3,Q0,nQ0);
+VLG  input SHIFT/LOAD,D4,D0,CLOCK,CLOCK_INHIBIT,In_Seri,D1,D5;
+VLG  input D2,D7,D6,D3;
+VLG  output Q0,nQ0;
+VLG  and #(23) and2(w10,w8,D1);
+VLG  not #(115) inv(w8,SHIFT/LOAD);
+VLG  and #(16) and2(w13,SHIFT/LOAD,CLOCK);
+VLG  and #(16) and2(w15,SHIFT/LOAD,CLOCK_INHIBIT);
+VLG  nor #(65) nor2(w2,w15,w13);
+VLG  and #(16) and2(w17,w10,w8);
+VLG  and #(23) and2(w4,w8,D0);
+VLG  and #(23) and2(w20,w8,D2);
+VLG  and #(16) and2(w24,w23,w8);
+VLG  not #(10) inv(w26,w25);
+VLG  not #(17) inv(w25,In_Seri);
+VLG  and #(23) and2(nQ0,w4,w8);
+VLG  and #(23) and2(w23,w8,D4);
+VLG  and #(23) and2(w36,w8,D7);
+VLG  and #(23) and2(w42,w8,D6);
+VLG  and #(16) and2(w43,w42,w8);
+VLG  and #(23) and2(w39,w8,D5);
+VLG  and #(16) and2(w45,w36,w8);
+VLG  and #(16) and2(w40,w39,w8);
+VLG  and #(16) and2(w34,w20,w8);
+VLG  and #(23) and2(w48,w8,D3);
+VLG  and #(16) and2(w49,w48,w8);
+VLG endmodule
+FSYM

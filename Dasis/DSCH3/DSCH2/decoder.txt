@@ -1,0 +1,34 @@
+// DSCH 2.7f
+// 28/10/2019 02:45:02
+// F:\Praktikum\Dasis\DSCH3\DSCH2\decoder.sch
+
+module decoder( c44,c55,c77,c66,c22,c33,c11,c00,
+ out2,out2,out2);
+ input c44,c55,c77,c66,c22,c33,c11,c00;
+ output out2,out2,out2;
+ or #(12) A(w13,w9,w10,w11,w12);
+ or #(19) C(out2,c77,c66,c55,c44);
+ or #(19) B(out2,c77,c66,c33,c22);
+ or #(19) A(out2,c77,c55,c33,c11);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 4=~4;
+#2000 5=~5;
+#4000 7=~7;
+#8000 6=~6;
+#16000 2=~2;
+#32000 3=~3;
+#64000 1=~1;
+#128000 0=~0;
+
+// Simulation parameters
+// 4 CLK 10 10
+// 5 CLK 20 20
+// 7 CLK 40 40
+// 6 CLK 80 80
+// 2 CLK 160 160
+// 3 CLK 320 320
+// 1 CLK 640 640
+// 0 CLK 1280 1280

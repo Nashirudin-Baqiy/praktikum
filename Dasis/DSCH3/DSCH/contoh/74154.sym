@@ -1,0 +1,138 @@
+USER SYMBOL by DSCH 2.6h
+DATE 12/12/2004 10:26:32
+SYM  #74154
+BB(0,0,40,170)
+TITLE 10 10  #74154
+MODEL 6000
+REC(5,5,30,160)
+PIN(0,40,0.00,0.00)20
+PIN(0,30,0.00,0.00)21
+PIN(0,10,0.00,0.00)23
+PIN(0,20,0.00,0.00)22
+PIN(0,60,0.00,0.00)18
+PIN(0,50,0.00,0.00)19
+PIN(40,110,2.00,1.00)15
+PIN(40,120,2.00,1.00)14
+PIN(40,10,2.00,1.00)9
+PIN(40,90,2.00,1.00)17
+PIN(40,150,2.00,1.00)10
+PIN(40,130,2.00,1.00)13
+PIN(40,140,2.00,1.00)11
+PIN(40,100,2.00,1.00)16
+PIN(40,30,2.00,1.00)7
+PIN(40,70,2.00,1.00)3
+PIN(40,60,2.00,1.00)4
+PIN(40,80,2.00,1.00)2
+PIN(40,20,2.00,1.00)8
+PIN(40,160,2.00,1.00)1
+PIN(40,50,2.00,1.00)5
+PIN(40,40,2.00,1.00)6
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,60,5,60)
+LIG(0,50,5,50)
+LIG(35,110,40,110)
+LIG(35,120,40,120)
+LIG(35,10,40,10)
+LIG(35,90,40,90)
+LIG(35,150,40,150)
+LIG(35,130,40,130)
+LIG(35,140,40,140)
+LIG(35,100,40,100)
+LIG(35,30,40,30)
+LIG(35,70,40,70)
+LIG(35,60,40,60)
+LIG(35,80,40,80)
+LIG(35,20,40,20)
+LIG(35,160,40,160)
+LIG(35,50,40,50)
+LIG(35,40,40,40)
+LIG(5,5,5,165)
+LIG(5,5,35,5)
+LIG(35,5,35,165)
+LIG(35,165,5,165)
+VLG module IC_DECO4_16( 20,21,23,22,18,19,15,14,
+VLG  9,17,10,13,11,16,7,3,
+VLG  4,2,8,1,5,6);
+VLG  input 20,21,23,22,18,19;
+VLG  output 15,14,9,17,10,13,11,16;
+VLG  output 7,3,4,2,8,1,5,6;
+VLG  wire w46,w47,w48,w49,w50,w51,w52,w53;
+VLG  wire w54,w55,w56,w57,w58,w59,w60,w61;
+VLG  wire w62,w63,w64,w65,w66,w67,w68,w69;
+VLG  wire w70,w71,w72,w73,w74,w75,w76,w77;
+VLG  not #(59) inv(w2,23);
+VLG  not #(10) inv(16,w3);
+VLG  not #(59) inv(w6,22);
+VLG  not #(59) inv(w12,20);
+VLG  not #(59) inv(w13,21);
+VLG  not #(10) inv(17,w10);
+VLG  not #(10) inv(13,w20);
+VLG  not #(10) inv(11,w22);
+VLG  not #(10) inv(15,w17);
+VLG  not #(10) inv(10,w18);
+VLG  not #(10) inv(14,w15);
+VLG  not #(10) inv(9,w25);
+VLG  not #(10) inv(1,w26);
+VLG  not #(10) inv(5,w28);
+VLG  not #(10) inv(2,w32);
+VLG  not #(10) inv(6,w35);
+VLG  not #(10) inv(3,w37);
+VLG  not #(10) inv(4,w38);
+VLG  not #(10) inv(8,w40);
+VLG  not #(10) inv(7,w41);
+VLG  not #(10) inv(w43,19);
+VLG  and #(121) and2(w8,w43,w44);
+VLG  not #(10) inv(w44,18);
+VLG  and #(15) and2_AN1(w10,w46,w47);
+VLG  and #(15) and3_AN2(w47,23,22,21);
+VLG  and #(15) and2_AN3(w46,w8,20);
+VLG  and #(15) and2_AN4(w3,w48,w49);
+VLG  and #(15) and3_AN5(w49,w2,22,21);
+VLG  and #(15) and2_AN6(w48,w8,20);
+VLG  and #(15) and2_AN7(w15,w50,w51);
+VLG  and #(15) and3_AN8(w51,w2,w6,21);
+VLG  and #(15) and2_AN9(w50,w8,20);
+VLG  and #(15) and2_AN10(w17,w52,w53);
+VLG  and #(15) and3_AN11(w53,23,w6,21);
+VLG  and #(15) and2_AN12(w52,w8,20);
+VLG  and #(15) and2_AN13(w18,w54,w55);
+VLG  and #(15) and3_AN14(w55,23,w6,w13);
+VLG  and #(15) and2_AN15(w54,w8,20);
+VLG  and #(15) and2_AN16(w20,w56,w57);
+VLG  and #(15) and3_AN17(w57,23,22,w13);
+VLG  and #(15) and2_AN18(w56,w8,20);
+VLG  and #(15) and2_AN19(w22,w58,w59);
+VLG  and #(15) and3_AN20(w59,w2,22,w13);
+VLG  and #(15) and2_AN21(w58,w8,20);
+VLG  and #(15) and2_AN22(w25,w60,w61);
+VLG  and #(15) and3_AN23(w61,w2,w6,w13);
+VLG  and #(15) and2_AN24(w60,w8,20);
+VLG  and #(15) and2_AN25(w26,w62,w63);
+VLG  and #(15) and3_AN26(w63,w2,w6,w13);
+VLG  and #(15) and2_AN27(w62,w8,w12);
+VLG  and #(15) and2_AN28(w37,w64,w65);
+VLG  and #(15) and3_AN29(w65,w2,22,w13);
+VLG  and #(15) and2_AN30(w64,w8,w12);
+VLG  and #(15) and2_AN31(w38,w66,w67);
+VLG  and #(15) and3_AN32(w67,23,22,w13);
+VLG  and #(15) and2_AN33(w66,w8,w12);
+VLG  and #(15) and2_AN34(w32,w68,w69);
+VLG  and #(15) and3_AN35(w69,23,w6,w13);
+VLG  and #(15) and2_AN36(w68,w8,w12);
+VLG  and #(15) and2_AN37(w35,w70,w71);
+VLG  and #(15) and3_AN38(w71,23,w6,21);
+VLG  and #(15) and2_AN39(w70,w8,w12);
+VLG  and #(15) and2_AN40(w28,w72,w73);
+VLG  and #(15) and3_AN41(w73,w2,w6,21);
+VLG  and #(15) and2_AN42(w72,w8,w12);
+VLG  and #(15) and2_AN43(w41,w74,w75);
+VLG  and #(15) and3_AN44(w75,w2,22,21);
+VLG  and #(15) and2_AN45(w74,w8,w12);
+VLG  and #(15) and2_AN46(w40,w76,w77);
+VLG  and #(15) and3_AN47(w77,21,22,23);
+VLG  and #(15) and2_AN48(w76,w8,w12);
+VLG endmodule
+FSYM

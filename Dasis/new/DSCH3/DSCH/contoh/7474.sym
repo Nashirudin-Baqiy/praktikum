@@ -1,0 +1,72 @@
+USER SYMBOL by DSCH 2.6h
+DATE 26/12/2004 7:53:45
+SYM  #7474
+BB(0,0,40,90)
+TITLE 10 10  #7474
+MODEL 6000
+REC(5,5,30,80)
+PIN(0,20,0.00,0.00)3
+PIN(0,10,0.00,0.00)4
+PIN(0,80,0.00,0.00)1
+PIN(0,30,0.00,0.00)2
+PIN(0,50,0.00,0.00)12
+PIN(0,40,0.00,0.00)13
+PIN(0,70,0.00,0.00)10
+PIN(0,60,0.00,0.00)11
+PIN(40,30,2.00,1.00)6
+PIN(40,40,2.00,1.00)5
+PIN(40,10,2.00,1.00)9
+PIN(40,20,2.00,1.00)8
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(0,80,5,80)
+LIG(0,30,5,30)
+LIG(0,50,5,50)
+LIG(0,40,5,40)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(35,30,40,30)
+LIG(35,40,40,40)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(5,5,5,85)
+LIG(5,5,35,5)
+LIG(35,5,35,85)
+LIG(35,85,5,85)
+VLG module IC_FFD7474( 3,4,1,2,12,13,10,11,
+VLG  6,5,9,8);
+VLG  input 3,4,1,2,12,13,10,11;
+VLG  output 6,5,9,8;
+VLG  wire w31,w32,w33,w34,w35,w36,w37,w38;
+VLG  not #(24) inv(w2,3);
+VLG  not #(17) inv(w7,w2);
+VLG  and #(16) and2(w11,2,6);
+VLG  and #(16) and2(w13,5,w12);
+VLG  not #(10) inv(w12,2);
+VLG  not #(17) inv(w3,4);
+VLG  not #(17) inv(w4,1);
+VLG  not #(17) inv(w17,13);
+VLG  not #(17) inv(w16,10);
+VLG  not #(10) inv(w26,12);
+VLG  and #(16) and2(w19,9,w26);
+VLG  and #(16) and2(w18,12,8);
+VLG  not #(17) inv(w30,w20);
+VLG  not #(24) inv(w20,11);
+VLG  nor #(31) nor3_FF1(6,w3,w31,5);
+VLG  nor #(31) nor3_FF2(5,6,w32,w4);
+VLG  and #(15) and2_FF3(w31,w7,w5);
+VLG  and #(15) and2_FF4(w32,w6,w7);
+VLG  nor #(24) nor3_FF5(w6,w3,w33,w5);
+VLG  nor #(24) nor3_FF6(w5,w6,w34,w4);
+VLG  and #(15) and2_FF7(w33,w2,w11);
+VLG  and #(15) and2_FF8(w34,w13,w2);
+VLG  nor #(24) nor3_FF9(w21,w16,w35,w22);
+VLG  nor #(24) nor3_FF10(w22,w21,w36,w17);
+VLG  and #(15) and2_FF11(w35,w20,w18);
+VLG  and #(15) and2_FF12(w36,w19,w20);
+VLG  nor #(31) nor3_FF13(8,w16,w37,9);
+VLG  nor #(31) nor3_FF14(9,8,w38,w17);
+VLG  and #(15) and2_FF15(w37,w30,w22);
+VLG  and #(15) and2_FF16(w38,w21,w30);
+VLG endmodule
+FSYM

@@ -1,0 +1,65 @@
+USER SYMBOL by DSCH 2.6h
+DATE 20/01/2005 4:43:43
+SYM  #74178
+BB(0,0,60,70)
+TITLE 10 10  #74178
+MODEL 6000
+REC(5,5,50,60)
+PIN(0,40,0.00,0.00)Ds
+PIN(0,30,0.00,0.00)SE
+PIN(0,20,0.00,0.00)PE
+PIN(45,70,0.00,0.00)D0
+PIN(0,50,0.00,0.00)CLOCK
+PIN(15,70,0.00,0.00)D3
+PIN(25,70,0.00,0.00)D2
+PIN(35,70,0.00,0.00)D1
+PIN(15,0,2.00,1.00)Q3
+PIN(25,0,2.00,1.00)Q2
+PIN(35,0,2.00,1.00)Q1
+PIN(45,0,2.00,1.00)Q0
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(45,65,45,70)
+LIG(0,50,5,50)
+LIG(15,65,15,70)
+LIG(25,65,25,70)
+LIG(35,65,35,70)
+LIG(15,0,15,5)
+LIG(25,0,25,5)
+LIG(35,0,35,5)
+LIG(45,0,45,5)
+LIG(5,5,5,65)
+LIG(5,5,55,5)
+LIG(55,5,55,65)
+LIG(55,65,5,65)
+VLG module IC_74178( Ds,SE,PE,D0,CLOCK,D3,D2,D1,
+VLG  Q3,Q2,Q1,Q0);
+VLG  input Ds,SE,PE,D0,CLOCK,D3,D2,D1;
+VLG  output Q3,Q2,Q1,Q0;
+VLG  and #(16) and3(w4,Q3,w2,w3);
+VLG  or #(13) or3(w8,w5,w6,w7);
+VLG  and #(16) and3(w10,Q1,w2,w3);
+VLG  and #(16) and2(w13,Q2,w12);
+VLG  and #(16) and3(w16,w3,D1,w15);
+VLG  not #(31) inv(w12,w3);
+VLG  not #(66) inv(w3,SE);
+VLG  not #(38) inv(w2,PE);
+VLG  not #(31) inv(w15,w2);
+VLG  dreg #(12) dreg9(Q1,w23,w20,w21,CLOCK);
+VLG  dreg #(12) dreg10(Q0,w26,w8,w24,CLOCK);
+VLG  and #(16) and3(w6,w3,D0,w15);
+VLG  and #(16) and2(w7,Q1,w12);
+VLG  and #(16) and3(w5,Q0,w2,w3);
+VLG  and #(16) and2(w28,Ds,w12);
+VLG  or #(13) or3(w30,w4,w29,w28);
+VLG  and #(16) and3(w31,Q2,w2,w3);
+VLG  and #(16) and2(w32,Q3,w12);
+VLG  and #(16) and3(w34,w3,D2,w15);
+VLG  dreg #(12) dreg11(Q2,w37,w35,w36,CLOCK);
+VLG  dreg #(12) dreg12(Q3,w39,w30,w38,CLOCK);
+VLG  and #(16) and3(w29,w3,D3,w15);
+VLG  or #(13) or3(w35,w31,w34,w32);
+VLG  or #(13) or3(w20,w10,w16,w13);
+VLG endmodule
+FSYM

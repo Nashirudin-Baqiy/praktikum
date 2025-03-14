@@ -1,0 +1,138 @@
+USER SYMBOL by DSCH 2.6h
+DATE 14/12/2004 21:21:46
+SYM  #7448
+BB(0,0,40,90)
+TITLE 10 10  #7448
+MODEL 6000
+REC(5,5,30,80)
+PIN(0,20,0.00,0.00)6
+PIN(0,50,0.00,0.00)2
+PIN(0,60,0.00,0.00)1
+PIN(0,10,0.00,0.00)7
+PIN(0,40,0.00,0.00)3
+PIN(0,30,0.00,0.00)5
+PIN(40,40,2.00,1.00)14
+PIN(40,30,2.00,1.00)15
+PIN(40,10,2.00,1.00)9
+PIN(40,80,2.00,1.00)10
+PIN(40,70,2.00,1.00)11
+PIN(40,60,2.00,1.00)12
+PIN(40,50,2.00,1.00)13
+PIN(40,20,2.00,1.00)4
+LIG(0,20,5,20)
+LIG(0,50,5,50)
+LIG(0,60,5,60)
+LIG(0,10,5,10)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,10,40,10)
+LIG(35,80,40,80)
+LIG(35,70,40,70)
+LIG(35,60,40,60)
+LIG(35,50,40,50)
+LIG(35,20,40,20)
+LIG(5,5,5,85)
+LIG(5,5,35,5)
+LIG(35,5,35,85)
+LIG(35,85,5,85)
+VLG module IC_DECO_BCD_7SEG( 6,2,1,7,3,5,14,15,
+VLG  9,10,11,12,13,4);
+VLG  input 6,2,1,7,3,5;
+VLG  output 14,15,9,10,11,12,13,4;
+VLG  wire w37,w38,w39,w40,w41,w42,w43,w44;
+VLG  wire w45,w46,w47,w48,w49,w50,w51,w52;
+VLG  wire w53,w54,w55,w56,w57,w58,w59,w60;
+VLG  wire w61,w62,w63,w64,w65,w66,w67,w68;
+VLG  wire w69,w70,w71,w72,w73,w74,w75,w76;
+VLG  wire w77,w78,w79,w80,w81,w82,w83,w84;
+VLG  wire w85,w86,w87,w88,w89,w90,w91;
+VLG  not #(10) inv(14,w12);
+VLG  or #(72) or2(w2,6,w18);
+VLG  not #(10) inv(w18,3);
+VLG  and #(100) and2(w1,3,7);
+VLG  and #(128) and2(w3,3,1);
+VLG  and #(121) and2(w4,3,2);
+VLG  notif1 #(10) notif1(w27,w7,4);
+VLG  notif1 #(10) notif1(w28,w8,4);
+VLG  notif1 #(10) notif1(w29,w10,4);
+VLG  notif1 #(10) notif1(w30,w6,4);
+VLG  notif1 #(17) notif1(w31,w9,4);
+VLG  notif1 #(10) notif1(w32,w11,4);
+VLG  notif1 #(10) notif1(w12,w5,4);
+VLG  not #(10) inv(15,w32);
+VLG  not #(17) inv(9,w31);
+VLG  not #(17) inv(9,w31);
+VLG  not #(10) inv(10,w29);
+VLG  not #(10) inv(11,w27);
+VLG  not #(10) inv(12,w28);
+VLG  not #(10) inv(13,w30);
+VLG  and #(16) and2(w34,5,3);
+VLG  or #(19) or4(w35,6,2,1,7);
+VLG  or #(62) or3(4,w34,w36,w35);
+VLG  not #(10) inv(w36,3);
+VLG  and #(15) and3_BC1(w39,w37,w38,w3);
+VLG  not #(12) inv_BC2(w37,w2);
+VLG  not #(12) inv_BC3(w38,w4);
+VLG  and #(15) and3_BC4(w41,w40,w4,w1);
+VLG  not #(12) inv_BC5(w40,w2);
+VLG  and #(15) and3_BC6(w43,w2,w42,w1);
+VLG  not #(12) inv_BC7(w42,w3);
+VLG  and #(15) and3_BC8(w47,w44,w45,w46);
+VLG  not #(12) inv_BC9(w44,w4);
+VLG  not #(12) inv_BC10(w45,w3);
+VLG  not #(12) inv_BC11(w46,w1);
+VLG  or #(20) or4_BC12(w5,w48,w49,w50,w51);
+VLG  and #(15) and3_BC13(w53,w52,w3,w1);
+VLG  not #(12) inv_BC14(w52,w2);
+VLG  and #(15) and3_BC15(w56,w2,w54,w55);
+VLG  not #(12) inv_BC16(w54,w4);
+VLG  not #(12) inv_BC17(w55,w3);
+VLG  and #(15) and2_BC18(w59,w57,w58);
+VLG  not #(12) inv_BC19(w58,w2);
+VLG  not #(12) inv_BC20(w57,w4);
+VLG  and #(15) and2_BC21(w62,w60,w61);
+VLG  not #(12) inv_BC22(w61,w3);
+VLG  not #(12) inv_BC23(w60,w1);
+VLG  or #(20) or4_BC24(w6,w39,w41,w43,w47);
+VLG  and #(15) and3_BC25(w64,w63,w3,w1);
+VLG  not #(12) inv_BC26(w63,w4);
+VLG  and #(15) and2_BC27(w66,w4,w65);
+VLG  not #(12) inv_BC28(w65,w2);
+VLG  and #(15) and2_BC29(w69,w67,w68);
+VLG  not #(12) inv_BC30(w68,w4);
+VLG  not #(12) inv_BC31(w67,w3);
+VLG  or #(17) or3_BC32(w7,w64,w66,w69);
+VLG  and #(15) and3_BC33(w71,w4,w70,w1);
+VLG  not #(12) inv_BC34(w70,w3);
+VLG  and #(15) and3_BC35(w73,w72,w3,w1);
+VLG  not #(12) inv_BC36(w72,w4);
+VLG  and #(26) and2_BC37(w76,w74,w75);
+VLG  not #(12) inv_BC38(w75,w4);
+VLG  not #(12) inv_BC39(w74,w1);
+VLG  and #(26) and2_BC40(w78,w77,w3);
+VLG  not #(12) inv_BC41(w77,w1);
+VLG  or #(20) or4_BC42(w8,w53,w56,w59,w62);
+VLG  or #(19) or2_BC43(w9,w78,w76);
+VLG  and #(15) and2_BC44(w81,w79,w80);
+VLG  not #(12) inv_BC45(w80,w3);
+VLG  not #(12) inv_BC46(w79,w1);
+VLG  and #(15) and2_BC47(w83,w82,w4);
+VLG  not #(12) inv_BC48(w82,w3);
+VLG  and #(15) and2_BC49(w85,w84,w4);
+VLG  not #(12) inv_BC50(w84,w1);
+VLG  and #(15) and2_BC51(w87,w86,w2);
+VLG  not #(12) inv_BC52(w86,w3);
+VLG  or #(20) or4_BC53(w10,w71,w73,w76,w78);
+VLG  and #(15) and2_BC54(w48,w88,w4);
+VLG  not #(12) inv_BC55(w88,w3);
+VLG  and #(15) and2_BC56(w49,w89,w2);
+VLG  not #(12) inv_BC57(w89,w4);
+VLG  and #(15) and2_BC58(w50,w3,w90);
+VLG  not #(12) inv_BC59(w90,w4);
+VLG  and #(15) and2_BC60(w51,w91,w3);
+VLG  not #(12) inv_BC61(w91,w1);
+VLG  or #(20) or4_BC62(w11,w81,w83,w85,w87);
+VLG endmodule
+FSYM

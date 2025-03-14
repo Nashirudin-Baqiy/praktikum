@@ -1,0 +1,39 @@
+// DSCH 2.7f
+// 28/10/2019 02:49:07
+// F:\Praktikum\Dasis\Laprak\jadi.sch
+
+module jadi( A,B,C,COUT,SUM,out11);
+ input A,B,C;
+ output COUT,SUM,out11;
+ wire w41,w42,w43,w44;
+ not #(31) inv(w4,B);
+ and #(9) and(w8,w5,w6,w7);
+ and #(23) and(w10,w5,w6,w9);
+ and #(16) and(w11,w5,w4,w9);
+ and #(9) and(w12,w5,w4,w7);
+ and #(16) and(w14,w13,w6,w9);
+ and #(16) and(w15,w13,w6,w7);
+ and #(16) and(w16,w13,w4,w9);
+ and #(16) and(out11,w13,w4,w7);
+ not #(31) inv(w13,A);
+ not #(31) inv(w7,C);
+ or #(19) or(SUM,w16,w15,w10);
+ or #(19) or(COUT,w14,w11,w10);
+ xor #(3) sub_1(w39,w41,w36);
+ xor #(10) sub_2(w41,w38,w37);
+ nand #(10) sub_3(w42,w37,w38);
+ nand #(10) sub_4(w43,w37,w36);
+ nand #(10) sub_5(w44,w38,w36);
+ nand #(3) sub_6(w40,w42,w43,w44);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 A=~A;
+#2000 B=~B;
+#4000 C=~C;
+
+// Simulation parameters
+// A CLK 10 10
+// B CLK 20 20
+// C CLK 40 40
