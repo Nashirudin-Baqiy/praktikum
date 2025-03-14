@@ -1,0 +1,6 @@
+insert into ruang values
+('A101','A',1,'Ruang Seminar',60),
+('A102','A',1,'Ruang Tamu',18),
+('A201','A',2,'Lab Komputer',72),
+('B101','B',1,'Ruang Kuliah',60),
+('B303','B',3,'Ruang Kuliah',72);

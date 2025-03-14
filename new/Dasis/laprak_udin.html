@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TUGAS UDIN</title>
+    <link rel="shortcut icon" href="icon.png">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header, footer{
+            background-color: blue;
+            color: white;
+            padding: 15px;
+        }
+	.tombol{
+		padding: 2px 10px;
+	}
+        .column{
+            float: left;
+            padding: 15px;
+        }
+        .clearfix::after{
+            content:"";
+            clear: both;
+            display: table;
+        }
+        .nav{
+            width: 25%;
+        }
+        .content{
+		width: 75%;
+        }
+        .nav ul{
+            list-style-type: none;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+        }
+        .nav ul li{
+            margin: 5px;
+            padding: 10px;
+        }
+	.button {
+  		background-color: #4CAF50; /* Green */
+  		border: none;
+  		color: white;
+		margin: 5px;
+  		padding: 15px;
+  		text-align: center;
+  		text-decoration: none;
+  		display: block;
+  		font-size: 16px;
+		height: 55px;
+		width: 160px;
+	}
+	.sembunyi{
+		display: none;
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <center><h1>Materi HTML</h1></center>
+    </header>
+<div class="clearfix">
+<div class="column nav">
+	<div class="tombol">
+	<h2>
+	<ul>
+	<li><button onclick="heading()" class="button">Heading</button></li>
+        <li><button onclick="rule()" class="button">Horizontal Rule</button></li>
+        <li><button onclick="paragraf()" class="button">Paragraf</button></li>
+        <li><button onclick="brl()" class="button">Break Line</button></li>
+	</ul>
+	</h2>
+	</div>
+</div>
+    <div class="column content">
+
+	<div id="buka">
+	<h1>Selamat Datang!</h1>
+	<h2>Silahkan pilih materi untuk dibaca</h2>
+	</div>
+
+        <div id="heading" class="sembunyi">
+	<h2>HTML heading</h2>
+        <p>HTML heading digunakan untuk mendeskripsikan heading (judul). HTML heading ditampilkan dengan ukuran huruf yang
+                lebih besar dibanding teks biasa., dimulai dari h1 untuk ukuran huruf terbesar sampai dengan h6 untuk ukuran
+                huruf heading terkecil.</p>
+	</div>
+
+	<div id="rule" class="sembunyi">
+        <h2>HTML horizontal rule</h2>
+        <p>Elemen ini digunakan untuk memberikan garis horizontal lurus pada halaman web, didefinisikan dengan tag hr.</p>
+       	</div>
+
+	<div id="paragraf" class="sembunyi">
+        <h2>HTML paragraf</h2>
+        <p>Elemen ini digunakan untuk mendeskripsikan sebuah paragraf, didefinisikan dengan pasangan tag p.</p>
+       	</div>
+	
+	<div id="brl" class="sembunyi">
+        <h2>HTML break line</h2>
+        <p>Elemen ini digunakan untuk membuat baris baru (line break), didefinisikan dengan tag br. Dalam dokumen HTML spasi
+        lebih maupun baris kosong akan dianggap sebagai spasi tunggal, sehingga untuk memberikan line break dapat
+        digunakan elemen break line.</p>
+	</div>
+
+    </div>
+</div>
+<footer>
+    <p>Pengerjaan HTML Layout Dasar Sistem - by Nashirudin Baqiy</p>
+</footer>
+<script>
+  var x = document.getElementById("heading");
+  var y = document.getElementById("rule");
+  var z = document.getElementById("paragraf");
+  var v = document.getElementById("brl");
+  var b = document.getElementById("buka");
+function heading() {
+  x.style.display = "block";
+  y.style.display = "none";
+  z.style.display = "none";
+  v.style.display = "none";
+  b.style.display = "none";
+}
+function rule() {
+  x.style.display = "none";
+  y.style.display = "block";
+  z.style.display = "none";
+  v.style.display = "none";
+  b.style.display = "none";
+}
+function paragraf() {
+  x.style.display = "none";
+  y.style.display = "none";
+  z.style.display = "block";
+  v.style.display = "none";
+  b.style.display = "none";
+}
+function brl() {
+  x.style.display = "none";
+  y.style.display = "none";
+  z.style.display = "none";
+  v.style.display = "block";
+  b.style.display = "none";
+}
+</script>
+</body>
+</html>

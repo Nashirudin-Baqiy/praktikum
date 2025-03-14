@@ -1,0 +1,14 @@
+insert into barang values
+(108001,'Meja Kuliah	','PNBP',2008,DEFAULT),
+(109001,'Meja Komputer','PNBP',2009,DEFAULT),
+(110001,'Meja Sidang','PNBP',2010,DEFAULT),
+(111001,'Meja Tamu','BMOM',2011,DEFAULT),
+(208001,'Kursi Kuliah','PNBP',2008,DEFAULT),
+(209001,'Kursi Lipat','PNBP',2009,DEFAULT),
+(210001,'Kursi Sidang','PNBP',2010,DEFAULT),
+(211001,'Kursi Tamu','BMOM',2011,DEFAULT),
+(308001,'LCD','PNBP',2008,DEFAULT),
+(309001,'LCD','Hibah',2009,DEFAULT),
+(409001,'Layar Peraga','BMOM',2009,DEFAULT),
+(409002,'Layar Peraga','Hibah',2009,DEFAULT),
+(409003,'Whiteboard','PNBP',2009,DEFAULT);

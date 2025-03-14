@@ -1,0 +1,6 @@
+insert into barang values
+(208002,'Kursi Kuliah','BMOM',2008,DEFAULT),
+(210002,'Kursi Kuliah','Hibah',2010,DEFAULT),
+(211002,'Kursi Kuliah','PNBP',2011,DEFAULT),
+(509001,'Komputer Desktop','PNBP',2009,DEFAULT),
+(509002,'Printer Laser','PNBP',2009,DEFAULT);

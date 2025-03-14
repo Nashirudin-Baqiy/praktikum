@@ -1,0 +1,5 @@
+insert into ruang values
+('B102','B',1,'Ruang Kuliah',60,45),
+('B201','B',2,'Ruang Kuliah',75,65),
+('B202','B',2,'Ruang Kuliah',75,65),
+('B203','B',2,'Lab Komputer',60,50);

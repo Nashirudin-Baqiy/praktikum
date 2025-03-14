@@ -1,0 +1,12 @@
+select noruang, nobarang
+from isiruang
+where nobarang like "4%";
+
+select sum(jumlah)
+from isiruang
+where nobarang like "3%";
+
+select max(jumlah)
+from isiruang
+where nobarang like "2%"
+and noruang like "A%";
